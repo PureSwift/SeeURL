@@ -6,8 +6,8 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
-import CcURL
-import SwiftFoundation
+//import CcURL
+//import SwiftFoundation
 
 // Dot notation syntax for class
 public extension HTTP {
@@ -24,7 +24,7 @@ public extension HTTP {
             // Only HTTP 1.1 is supported
             guard request.version == HTTP.Version(1, 1) else { throw Error.BadRequest }
             
-            guard let url = request.URL.URLString else { throw Error.BadRequest }
+            let url = request.URL
             
             let curl = cURL()
             

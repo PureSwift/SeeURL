@@ -6,7 +6,7 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
-import CcURL
+//import CcURL
 
 public extension cURL.StringList {
     
