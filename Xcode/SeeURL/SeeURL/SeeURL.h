@@ -6,5 +6,4 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
-
-
+@import Foundation;

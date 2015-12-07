@@ -17,6 +17,9 @@
 		6E2F722B1C1525B600E81D56 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F72251C1525B600E81D56 /* HTTPClient.swift */; };
 		6E2F72301C1525D600E81D56 /* cURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F722D1C1525D600E81D56 /* cURLTests.swift */; };
 		6E2F72311C1525D600E81D56 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F722E1C1525D600E81D56 /* HTTPClientTests.swift */; };
+		6E530A6B1C15292300AD2B2E /* cURL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E530A691C15292300AD2B2E /* cURL.framework */; };
+		6E530A6C1C15292300AD2B2E /* SwiftFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E530A6A1C15292300AD2B2E /* SwiftFoundation.framework */; };
+		6E530A6E1C1529AD00AD2B2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E530A6D1C1529AD00AD2B2E /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		6E2F72251C1525B600E81D56 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = ../../../Sources/cURLSwift/HTTPClient.swift; sourceTree = "<group>"; };
 		6E2F722D1C1525D600E81D56 /* cURLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLTests.swift; path = ../../../Sources/UnitTests/cURLTests.swift; sourceTree = "<group>"; };
 		6E2F722E1C1525D600E81D56 /* HTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPClientTests.swift; path = ../../../Sources/UnitTests/HTTPClientTests.swift; sourceTree = "<group>"; };
+		6E530A691C15292300AD2B2E /* cURL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = cURL.framework; path = ../../Carthage/Build/Mac/cURL.framework; sourceTree = "<group>"; };
+		6E530A6A1C15292300AD2B2E /* SwiftFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftFoundation.framework; path = ../../Carthage/Build/Mac/SwiftFoundation.framework; sourceTree = "<group>"; };
+		6E530A6D1C1529AD00AD2B2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E530A6E1C1529AD00AD2B2E /* Foundation.framework in Frameworks */,
+				6E530A6B1C15292300AD2B2E /* cURL.framework in Frameworks */,
+				6E530A6C1C15292300AD2B2E /* SwiftFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +76,9 @@
 		6E2F71FB1C15255100E81D56 = {
 			isa = PBXGroup;
 			children = (
+				6E530A6D1C1529AD00AD2B2E /* Foundation.framework */,
+				6E530A691C15292300AD2B2E /* cURL.framework */,
+				6E530A6A1C15292300AD2B2E /* SwiftFoundation.framework */,
 				6E2F72071C15255100E81D56 /* SeeURL */,
 				6E2F72131C15255100E81D56 /* SeeURLTests */,
 				6E2F72061C15255100E81D56 /* Products */,
@@ -340,7 +352,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../../Carthage/Build/Mac;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SeeURL/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -362,7 +374,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../../Carthage/Build/Mac;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SeeURL/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
