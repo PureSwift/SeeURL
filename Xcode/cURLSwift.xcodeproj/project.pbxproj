@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1AE78FD41B968D0100CDEF17 /* cURLSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE78FD31B968D0100CDEF17 /* cURLSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1AE78FDB1B968D0200CDEF17 /* cURLSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE78FD01B968D0100CDEF17 /* cURLSwift.framework */; settings = {ASSET_TAGS = (); }; };
+		1AE78FDB1B968D0200CDEF17 /* cURLSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE78FD01B968D0100CDEF17 /* cURLSwift.framework */; };
 		1AE78FE01B968D0200CDEF17 /* cURLSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FDF1B968D0200CDEF17 /* cURLSwiftTests.swift */; };
-		1AE78FFB1B968D5B00CDEF17 /* cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FF61B968D5B00CDEF17 /* cURL.swift */; settings = {ASSET_TAGS = (); }; };
-		1AE78FFC1B968D5B00CDEF17 /* cURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FF71B968D5B00CDEF17 /* cURLError.swift */; settings = {ASSET_TAGS = (); }; };
-		1AE78FFD1B968D5B00CDEF17 /* cURLReadFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FF81B968D5B00CDEF17 /* cURLReadFunction.swift */; settings = {ASSET_TAGS = (); }; };
-		1AE78FFE1B968D5B00CDEF17 /* cURLWriteFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FF91B968D5B00CDEF17 /* cURLWriteFunction.swift */; settings = {ASSET_TAGS = (); }; };
-		1AE78FFF1B968D5B00CDEF17 /* cURLStringList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FFA1B968D5B00CDEF17 /* cURLStringList.swift */; settings = {ASSET_TAGS = (); }; };
-		1AE790021B968D8000CDEF17 /* cURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE790001B968D8000CDEF17 /* cURLTests.swift */; settings = {ASSET_TAGS = (); }; };
-		1AE790031B968D8000CDEF17 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE790011B968D8000CDEF17 /* HTTPClientTests.swift */; settings = {ASSET_TAGS = (); }; };
-		1AE790051B968E0C00CDEF17 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE790041B968E0C00CDEF17 /* HTTPClient.swift */; settings = {ASSET_TAGS = (); }; };
+		1AE78FFB1B968D5B00CDEF17 /* cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FF61B968D5B00CDEF17 /* cURL.swift */; };
+		1AE78FFC1B968D5B00CDEF17 /* cURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FF71B968D5B00CDEF17 /* cURLError.swift */; };
+		1AE78FFD1B968D5B00CDEF17 /* cURLReadFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FF81B968D5B00CDEF17 /* cURLReadFunction.swift */; };
+		1AE78FFE1B968D5B00CDEF17 /* cURLWriteFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FF91B968D5B00CDEF17 /* cURLWriteFunction.swift */; };
+		1AE78FFF1B968D5B00CDEF17 /* cURLStringList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE78FFA1B968D5B00CDEF17 /* cURLStringList.swift */; };
+		1AE790021B968D8000CDEF17 /* cURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE790001B968D8000CDEF17 /* cURLTests.swift */; };
+		1AE790031B968D8000CDEF17 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE790011B968D8000CDEF17 /* HTTPClientTests.swift */; };
+		1AE790051B968E0C00CDEF17 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE790041B968E0C00CDEF17 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 		1AE78FD51B968D0100CDEF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AE78FDA1B968D0200CDEF17 /* cURLSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cURLSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE78FDF1B968D0200CDEF17 /* cURLSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cURLSwiftTests.swift; sourceTree = "<group>"; };
-		1AE78FE11B968D0200CDEF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AE78FE11B968D0200CDEF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Xcode/Info.plist; sourceTree = "<group>"; };
 		1AE78FF61B968D5B00CDEF17 /* cURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cURL.swift; sourceTree = "<group>"; };
 		1AE78FF71B968D5B00CDEF17 /* cURLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cURLError.swift; sourceTree = "<group>"; };
 		1AE78FF81B968D5B00CDEF17 /* cURLReadFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cURLReadFunction.swift; sourceTree = "<group>"; };
@@ -102,7 +102,8 @@
 				1AE790001B968D8000CDEF17 /* cURLTests.swift */,
 				1AE78FE11B968D0200CDEF17 /* Info.plist */,
 			);
-			path = cURLSwiftTests;
+			name = cURLSwiftTests;
+			path = ../Sources/UnitTests;
 			sourceTree = "<group>";
 		};
 		1AE78FEA1B968D1100CDEF17 /* Source */ = {
@@ -116,7 +117,7 @@
 				1AE78FFA1B968D5B00CDEF17 /* cURLStringList.swift */,
 			);
 			name = Source;
-			path = cURLSwift;
+			path = ../Sources/cURLSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +350,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = cURLSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.cURLSwift;
@@ -367,7 +368,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = cURLSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.cURLSwift;
@@ -380,7 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = cURLSwiftTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.cURLSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -391,7 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = cURLSwiftTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.cURLSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,6 +418,7 @@
 				1AE78FE61B968D0200CDEF17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AE78FE71B968D0200CDEF17 /* Build configuration list for PBXNativeTarget "cURLSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +427,7 @@
 				1AE78FE91B968D0200CDEF17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

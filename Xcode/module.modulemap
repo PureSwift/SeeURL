@@ -1,0 +1,5 @@
+module CcURL [system] {
+    header "/usr/local/include/cURL"
+	link "curl"
+    export *
+}
