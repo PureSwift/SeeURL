@@ -6,7 +6,7 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
-import cURL
+import CcURL
 
 /// Class that encapsulates cURL handler.
 public final class cURL {

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import cURL
+import CcURL
 @testable import SwiftFoundation
 
 class cURLTests: XCTestCase {

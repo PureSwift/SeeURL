@@ -6,7 +6,7 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
-import cURL
+import CcURL
 import SwiftFoundation
 
 // Dot notation syntax for class
