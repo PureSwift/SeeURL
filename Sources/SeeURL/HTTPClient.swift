@@ -6,8 +6,10 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
-//import CcURL
-//import SwiftFoundation
+#if os(Linux)
+    import CcURL
+    import SwiftFoundation
+#endif
 
 // Dot notation syntax for class
 public extension HTTP {

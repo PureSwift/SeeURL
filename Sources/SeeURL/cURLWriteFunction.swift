@@ -6,7 +6,9 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
-//import CcURL
+#if os(Linux)
+    import CcURL
+#endif
 
 public extension cURL {
     
