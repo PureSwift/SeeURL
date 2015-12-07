@@ -91,7 +91,9 @@ public extension HTTP {
             
             let responseCode = try curl.getInfo(CURLINFO_RESPONSE_CODE) as Int
             
-            var response = HTTP.Response(statusCode: responseCode)
+            var response = HTTP.Response()
+            
+            response.statusCode = responseCode
             
             // TODO: implement header parsing
             

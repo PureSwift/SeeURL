@@ -13,7 +13,7 @@ public extension HTTP {
         
         public var URL: String
         
-        public var timeoutInterval: TimeInterval = 30
+        public var timeoutInterval: Double = 30
         
         public var body: Data?
         

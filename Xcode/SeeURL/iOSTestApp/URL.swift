@@ -6,6 +6,8 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
+public typealias SwiftFoundationURL = URL
+
 /// Encapsulates the components of an URL.
 public struct URL: CustomStringConvertible {
     

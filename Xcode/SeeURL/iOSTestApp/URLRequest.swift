@@ -10,5 +10,5 @@ public protocol URLRequest {
     
     var URL: String { get }
     
-    var timeoutInterval: TimeInterval { get }
+    var timeoutInterval: Double { get }
 }

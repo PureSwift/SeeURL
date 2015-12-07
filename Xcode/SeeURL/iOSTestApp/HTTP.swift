@@ -8,7 +8,7 @@
 
 public struct HTTP: URLProtocol {
         
-    public static func validURL(URL: SwiftFoundation.URL) -> Bool {
+    public static func validURL(URL: SwiftFoundationURL) -> Bool {
         
         guard (URL.scheme == "http" ||  URL.scheme == "https") else { return false }
         

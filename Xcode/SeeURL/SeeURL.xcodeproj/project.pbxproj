@@ -49,6 +49,7 @@
 		6E92A4C31C15724B007BC4E9 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4B81C15724B007BC4E9 /* URLRequest.swift */; };
 		6E92A4C41C15724B007BC4E9 /* URLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4B91C15724B007BC4E9 /* URLResponse.swift */; };
 		6E92A4C51C15724B007BC4E9 /* URLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4BA1C15724B007BC4E9 /* URLClient.swift */; };
+		6E92A4DF1C1574BE007BC4E9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4DE1C1574BE007BC4E9 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		6E92A4DB1C157347007BC4E9 /* multi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multi.h; sourceTree = "<group>"; };
 		6E92A4DC1C157347007BC4E9 /* stdcheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdcheaders.h; sourceTree = "<group>"; };
 		6E92A4DD1C157347007BC4E9 /* typecheck-gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "typecheck-gcc.h"; sourceTree = "<group>"; };
+		6E92A4DE1C1574BE007BC4E9 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		6E92A4C61C157269007BC4E9 /* SwiftFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				6E92A4DE1C1574BE007BC4E9 /* Data.swift */,
 				6E92A4B01C15724B007BC4E9 /* HTTP.swift */,
 				6E92A4B11C15724B007BC4E9 /* HTTPRequest.swift */,
 				6E92A4B21C15724B007BC4E9 /* HTTPResponse.swift */,
@@ -510,6 +513,7 @@
 				6E92A4C01C15724B007BC4E9 /* HTTPStatusCode.swift in Sources */,
 				6E92A4AE1C1571FF007BC4E9 /* cURLWriteFunction.swift in Sources */,
 				6E92A4BD1C15724B007BC4E9 /* HTTPResponse.swift in Sources */,
+				6E92A4DF1C1574BE007BC4E9 /* Data.swift in Sources */,
 				6E92A4AB1C1571FF007BC4E9 /* cURLError.swift in Sources */,
 				6E92A4BE1C15724B007BC4E9 /* HTTPMethod.swift in Sources */,
 				6E92A4BC1C15724B007BC4E9 /* HTTPRequest.swift in Sources */,
