@@ -7,6 +7,7 @@
 //
 
 import cURL
+import SwiftFoundation
 
 // Dot notation syntax for class
 public extension HTTP {
@@ -92,7 +93,7 @@ public extension HTTP {
             
             var response = HTTP.Response(statusCode: responseCode)
             
-            // TODO implement header parsing
+            // TODO: implement header parsing
             
             response.body = unsafeBitCast(responseBodyStorage.data, Data.self)
             
