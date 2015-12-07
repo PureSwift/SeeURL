@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E2F72091C15255100E81D56 /* SeeURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E2F72081C15255100E81D56 /* SeeURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2F72101C15255100E81D56 /* SeeURL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2F72051C15255100E81D56 /* SeeURL.framework */; };
+		6E2F72261C1525B600E81D56 /* cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F72201C1525B600E81D56 /* cURL.swift */; };
+		6E2F72271C1525B600E81D56 /* cURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F72211C1525B600E81D56 /* cURLError.swift */; };
+		6E2F72281C1525B600E81D56 /* cURLReadFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F72221C1525B600E81D56 /* cURLReadFunction.swift */; };
+		6E2F72291C1525B600E81D56 /* cURLStringList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F72231C1525B600E81D56 /* cURLStringList.swift */; };
+		6E2F722A1C1525B600E81D56 /* cURLWriteFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F72241C1525B600E81D56 /* cURLWriteFunction.swift */; };
+		6E2F722B1C1525B600E81D56 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F72251C1525B600E81D56 /* HTTPClient.swift */; };
+		6E2F72301C1525D600E81D56 /* cURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F722D1C1525D600E81D56 /* cURLTests.swift */; };
+		6E2F72311C1525D600E81D56 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F722E1C1525D600E81D56 /* HTTPClientTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E2F72111C15255100E81D56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E2F71FC1C15255100E81D56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E2F72041C15255100E81D56;
+			remoteInfo = SeeURL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E2F72051C15255100E81D56 /* SeeURL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeeURL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E2F72081C15255100E81D56 /* SeeURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeeURL.h; sourceTree = "<group>"; };
+		6E2F720A1C15255100E81D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E2F720F1C15255100E81D56 /* SeeURLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeeURLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E2F72161C15255100E81D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E2F72201C1525B600E81D56 /* cURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURL.swift; path = ../../../Sources/cURLSwift/cURL.swift; sourceTree = "<group>"; };
+		6E2F72211C1525B600E81D56 /* cURLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLError.swift; path = ../../../Sources/cURLSwift/cURLError.swift; sourceTree = "<group>"; };
+		6E2F72221C1525B600E81D56 /* cURLReadFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLReadFunction.swift; path = ../../../Sources/cURLSwift/cURLReadFunction.swift; sourceTree = "<group>"; };
+		6E2F72231C1525B600E81D56 /* cURLStringList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLStringList.swift; path = ../../../Sources/cURLSwift/cURLStringList.swift; sourceTree = "<group>"; };
+		6E2F72241C1525B600E81D56 /* cURLWriteFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLWriteFunction.swift; path = ../../../Sources/cURLSwift/cURLWriteFunction.swift; sourceTree = "<group>"; };
+		6E2F72251C1525B600E81D56 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = ../../../Sources/cURLSwift/HTTPClient.swift; sourceTree = "<group>"; };
+		6E2F722D1C1525D600E81D56 /* cURLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLTests.swift; path = ../../../Sources/UnitTests/cURLTests.swift; sourceTree = "<group>"; };
+		6E2F722E1C1525D600E81D56 /* HTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPClientTests.swift; path = ../../../Sources/UnitTests/HTTPClientTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E2F72011C15255100E81D56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E2F720C1C15255100E81D56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E2F72101C15255100E81D56 /* SeeURL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E2F71FB1C15255100E81D56 = {
+			isa = PBXGroup;
+			children = (
+				6E2F72071C15255100E81D56 /* SeeURL */,
+				6E2F72131C15255100E81D56 /* SeeURLTests */,
+				6E2F72061C15255100E81D56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E2F72061C15255100E81D56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E2F72051C15255100E81D56 /* SeeURL.framework */,
+				6E2F720F1C15255100E81D56 /* SeeURLTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E2F72071C15255100E81D56 /* SeeURL */ = {
+			isa = PBXGroup;
+			children = (
+				6E2F72081C15255100E81D56 /* SeeURL.h */,
+				6E2F72201C1525B600E81D56 /* cURL.swift */,
+				6E2F72211C1525B600E81D56 /* cURLError.swift */,
+				6E2F72221C1525B600E81D56 /* cURLReadFunction.swift */,
+				6E2F72231C1525B600E81D56 /* cURLStringList.swift */,
+				6E2F72241C1525B600E81D56 /* cURLWriteFunction.swift */,
+				6E2F72251C1525B600E81D56 /* HTTPClient.swift */,
+				6E2F720A1C15255100E81D56 /* Info.plist */,
+			);
+			path = SeeURL;
+			sourceTree = "<group>";
+		};
+		6E2F72131C15255100E81D56 /* SeeURLTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E2F722D1C1525D600E81D56 /* cURLTests.swift */,
+				6E2F722E1C1525D600E81D56 /* HTTPClientTests.swift */,
+				6E2F72161C15255100E81D56 /* Info.plist */,
+			);
+			path = SeeURLTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6E2F72021C15255100E81D56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E2F72091C15255100E81D56 /* SeeURL.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6E2F72041C15255100E81D56 /* SeeURL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E2F72191C15255100E81D56 /* Build configuration list for PBXNativeTarget "SeeURL" */;
+			buildPhases = (
+				6E2F72001C15255100E81D56 /* Sources */,
+				6E2F72011C15255100E81D56 /* Frameworks */,
+				6E2F72021C15255100E81D56 /* Headers */,
+				6E2F72031C15255100E81D56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeeURL;
+			productName = SeeURL;
+			productReference = 6E2F72051C15255100E81D56 /* SeeURL.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6E2F720E1C15255100E81D56 /* SeeURLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E2F721C1C15255100E81D56 /* Build configuration list for PBXNativeTarget "SeeURLTests" */;
+			buildPhases = (
+				6E2F720B1C15255100E81D56 /* Sources */,
+				6E2F720C1C15255100E81D56 /* Frameworks */,
+				6E2F720D1C15255100E81D56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E2F72121C15255100E81D56 /* PBXTargetDependency */,
+			);
+			name = SeeURLTests;
+			productName = SeeURLTests;
+			productReference = 6E2F720F1C15255100E81D56 /* SeeURLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E2F71FC1C15255100E81D56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = PureSwift;
+				TargetAttributes = {
+					6E2F72041C15255100E81D56 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					6E2F720E1C15255100E81D56 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 6E2F71FF1C15255100E81D56 /* Build configuration list for PBXProject "SeeURL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6E2F71FB1C15255100E81D56;
+			productRefGroup = 6E2F72061C15255100E81D56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E2F72041C15255100E81D56 /* SeeURL */,
+				6E2F720E1C15255100E81D56 /* SeeURLTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E2F72031C15255100E81D56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E2F720D1C15255100E81D56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E2F72001C15255100E81D56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E2F72291C1525B600E81D56 /* cURLStringList.swift in Sources */,
+				6E2F722A1C1525B600E81D56 /* cURLWriteFunction.swift in Sources */,
+				6E2F722B1C1525B600E81D56 /* HTTPClient.swift in Sources */,
+				6E2F72281C1525B600E81D56 /* cURLReadFunction.swift in Sources */,
+				6E2F72271C1525B600E81D56 /* cURLError.swift in Sources */,
+				6E2F72261C1525B600E81D56 /* cURL.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E2F720B1C15255100E81D56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E2F72301C1525D600E81D56 /* cURLTests.swift in Sources */,
+				6E2F72311C1525D600E81D56 /* HTTPClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E2F72121C15255100E81D56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E2F72041C15255100E81D56 /* SeeURL */;
+			targetProxy = 6E2F72111C15255100E81D56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6E2F72171C15255100E81D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E2F72181C15255100E81D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6E2F721A1C15255100E81D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SeeURL/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E2F721B1C15255100E81D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SeeURL/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6E2F721D1C15255100E81D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SeeURLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E2F721E1C15255100E81D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SeeURLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E2F71FF1C15255100E81D56 /* Build configuration list for PBXProject "SeeURL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E2F72171C15255100E81D56 /* Debug */,
+				6E2F72181C15255100E81D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E2F72191C15255100E81D56 /* Build configuration list for PBXNativeTarget "SeeURL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E2F721A1C15255100E81D56 /* Debug */,
+				6E2F721B1C15255100E81D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E2F721C1C15255100E81D56 /* Build configuration list for PBXNativeTarget "SeeURLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E2F721D1C15255100E81D56 /* Debug */,
+				6E2F721E1C15255100E81D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E2F71FC1C15255100E81D56 /* Project object */;
+}
