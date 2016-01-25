@@ -20,6 +20,9 @@
 		6E18ED801C56C346002896B6 /* cURLSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18ED7E1C56C346002896B6 /* cURLSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E2F72091C15255100E81D56 /* SeeURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E2F72081C15255100E81D56 /* SeeURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E2F72101C15255100E81D56 /* SeeURL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2F72051C15255100E81D56 /* SeeURL.framework */; };
+		6E587D991C56D1C2009741E1 /* cURL.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D931C56D1AD009741E1 /* cURL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E587D9A1C56D1C2009741E1 /* JSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D951C56D1AD009741E1 /* JSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E587D9B1C56D1C2009741E1 /* SwiftFoundation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D971C56D1AD009741E1 /* SwiftFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E92A4471C15470A007BC4E9 /* cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4411C15470A007BC4E9 /* cURL.swift */; };
 		6E92A4481C15470A007BC4E9 /* cURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4421C15470A007BC4E9 /* cURLError.swift */; };
 		6E92A4491C15470A007BC4E9 /* cURLReadFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4431C15470A007BC4E9 /* cURLReadFunction.swift */; };
@@ -38,6 +41,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6E587D7F1C56D16E009741E1 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6E587D991C56D1C2009741E1 /* cURL.framework in Copy Frameworks */,
+				6E587D9A1C56D1C2009741E1 /* JSON.framework in Copy Frameworks */,
+				6E587D9B1C56D1C2009741E1 /* SwiftFoundation.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6E18ED771C56823E002896B6 /* SeeURL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeeURL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E18ED791C5685BF002896B6 /* cURLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cURLTests.swift; sourceTree = "<group>"; };
@@ -48,6 +67,12 @@
 		6E2F720A1C15255100E81D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E2F720F1C15255100E81D56 /* SeeURLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeeURLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2F72161C15255100E81D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E587D8C1C56D1AD009741E1 /* cURL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = cURL.framework; sourceTree = "<group>"; };
+		6E587D8E1C56D1AD009741E1 /* JSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSON.framework; sourceTree = "<group>"; };
+		6E587D901C56D1AD009741E1 /* SwiftFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftFoundation.framework; sourceTree = "<group>"; };
+		6E587D931C56D1AD009741E1 /* cURL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = cURL.framework; sourceTree = "<group>"; };
+		6E587D951C56D1AD009741E1 /* JSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSON.framework; sourceTree = "<group>"; };
+		6E587D971C56D1AD009741E1 /* SwiftFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftFoundation.framework; sourceTree = "<group>"; };
 		6E92A4411C15470A007BC4E9 /* cURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURL.swift; path = ../../Sources/SeeURL/cURL.swift; sourceTree = "<group>"; };
 		6E92A4421C15470A007BC4E9 /* cURLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLError.swift; path = ../../Sources/SeeURL/cURLError.swift; sourceTree = "<group>"; };
 		6E92A4431C15470A007BC4E9 /* cURLReadFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLReadFunction.swift; path = ../../Sources/SeeURL/cURLReadFunction.swift; sourceTree = "<group>"; };
@@ -118,6 +143,7 @@
 		6E2F71FB1C15255100E81D56 = {
 			isa = PBXGroup;
 			children = (
+				6E587D801C56D17E009741E1 /* Dependencies */,
 				6E18ED7D1C56C303002896B6 /* Swift Compatibility Header */,
 				6E92A4401C1546FB007BC4E9 /* Source */,
 				6E2F72071C15255100E81D56 /* SeeURL */,
@@ -151,6 +177,37 @@
 				6E2F72161C15255100E81D56 /* Info.plist */,
 			);
 			path = SeeURLTests;
+			sourceTree = "<group>";
+		};
+		6E587D801C56D17E009741E1 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				6E587D811C56D1AD009741E1 /* iOS */,
+				6E587D921C56D1AD009741E1 /* Mac */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		6E587D811C56D1AD009741E1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6E587D8C1C56D1AD009741E1 /* cURL.framework */,
+				6E587D8E1C56D1AD009741E1 /* JSON.framework */,
+				6E587D901C56D1AD009741E1 /* SwiftFoundation.framework */,
+			);
+			name = iOS;
+			path = ../Carthage/Build/iOS;
+			sourceTree = "<group>";
+		};
+		6E587D921C56D1AD009741E1 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				6E587D931C56D1AD009741E1 /* cURL.framework */,
+				6E587D951C56D1AD009741E1 /* JSON.framework */,
+				6E587D971C56D1AD009741E1 /* SwiftFoundation.framework */,
+			);
+			name = Mac;
+			path = ../Carthage/Build/Mac;
 			sourceTree = "<group>";
 		};
 		6E92A4401C1546FB007BC4E9 /* Source */ = {
@@ -229,6 +286,7 @@
 				6E2F720B1C15255100E81D56 /* Sources */,
 				6E2F720C1C15255100E81D56 /* Frameworks */,
 				6E2F720D1C15255100E81D56 /* Resources */,
+				6E587D7F1C56D16E009741E1 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
