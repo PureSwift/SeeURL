@@ -8,8 +8,9 @@
 
 #if os(Linux)
     import CcURL
-    import SwiftFoundation
 #endif
+
+import SwiftFoundation
 
 // Dot notation syntax for class
 public extension HTTP {
