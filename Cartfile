@@ -1,0 +1,2 @@
+github "PureSwift/SwiftFoundation" "develop"
+github "PureSwift/cURL" "master"
