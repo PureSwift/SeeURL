@@ -1,3 +1,5 @@
 .build
 Packages
 Carthage/*
+
+Xcode/SeeURL.xcodeproj/project.xcworkspace/xcuserdata/
