@@ -156,8 +156,8 @@
 		6E92A4401C1546FB007BC4E9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6E18ED631C568213002896B6 /* UnitTests */,
 				6E18ED621C5681F9002896B6 /* SeeURL */,
+				6E18ED631C568213002896B6 /* UnitTests */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -532,6 +532,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
 				INFOPLIST_FILE = SeeURLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;
@@ -545,6 +546,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
 				INFOPLIST_FILE = SeeURLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;

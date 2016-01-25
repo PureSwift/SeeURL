@@ -10,6 +10,8 @@
     import CcURL
 #endif
 
+import SwiftFoundation
+
 public extension cURL {
     
     public typealias ReadCallBack = curl_read_callback
@@ -39,9 +41,9 @@ public func curlReadFunction(pointer: UnsafeMutablePointer<Int8>, size: Int, nme
     
     guard (size * nmemb) > 0 else { return Int(false) }
     
-    guard currentIndex < data.count else { return Int(false) }
+    guard currentIndex < data.byteValue.count else { return Int(false) }
     
-    let byte = data[currentIndex]
+    let byte = data.byteValue[currentIndex]
     
     let char = CChar(byte)
     

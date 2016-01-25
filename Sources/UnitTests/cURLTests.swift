@@ -6,9 +6,15 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
+#if os(OSX) || os(iOS)
+    import cURL
+#elseif os(Linux)
+    import CcURL
+#endif
+
 import XCTest
-import CcURL
-@testable import SwiftFoundation
+import SeeURL
+import SwiftFoundation
 
 class cURLTests: XCTestCase {
 
@@ -62,11 +68,11 @@ class cURLTests: XCTestCase {
         
         try! curl.setOption(CURLOPT_POST, true)
         
-        let data: Data = [0x54, 0x65, 0x73, 0x74] // "Test"
+        let data: Data = Data(byteValue: [0x54, 0x65, 0x73, 0x74]) // "Test"
         
-        try! curl.setOption(CURLOPT_POSTFIELDS, data)
+        try! curl.setOption(CURLOPT_POSTFIELDS, data.byteValue)
         
-        try! curl.setOption(CURLOPT_POSTFIELDSIZE, data.count)
+        try! curl.setOption(CURLOPT_POSTFIELDSIZE, data.byteValue.count)
         
         do { try curl.perform() }
         catch { XCTFail("Error executing cURL request: \(error)"); return }
@@ -88,9 +94,9 @@ class cURLTests: XCTestCase {
         
         try! curl.setOption(CURLOPT_POST, true)
         
-        let data: Data = [0x54, 0x65, 0x73, 0x74] // "Test"
+        let data: Data = Data(byteValue: [0x54, 0x65, 0x73, 0x74]) // "Test"
         
-        try! curl.setOption(CURLOPT_POSTFIELDSIZE, data.count)
+        try! curl.setOption(CURLOPT_POSTFIELDSIZE, data.byteValue.count)
         
         let dataStorage = cURL.ReadFunctionStorage(data: data)
         
@@ -133,7 +139,11 @@ class cURLTests: XCTestCase {
         
         XCTAssert(responseCode == 200, "\(responseCode) == 200")
         
-        XCTAssert(NSData(bytes: unsafeBitCast(storage.data, Data.self)) == NSData(contentsOfURL: NSURL(string: url)!))
+        let bytes = unsafeBitCast(storage.data, [UInt8].self)
+        
+        let foundationData = Data(byteValue: bytes).toFoundation()
+        
+        XCTAssert(foundationData == NSData(contentsOfURL: NSURL(string: url)!))
 
     }
     
@@ -194,7 +204,11 @@ class cURLTests: XCTestCase {
         
         XCTAssert(responseCode == 200, "\(responseCode) == 200")
         
-        guard let json = try! NSJSONSerialization.JSONObjectWithData(NSData(bytes: unsafeBitCast(storage.data, Data.self)), options: NSJSONReadingOptions()) as? [String: [String: String]]
+        let bytes = unsafeBitCast(storage.data, [UInt8].self)
+        
+        let foundationData = Data(byteValue: bytes).toFoundation()
+        
+        guard let json = try! NSJSONSerialization.JSONObjectWithData(foundationData, options: NSJSONReadingOptions()) as? [String: [String: String]]
             else { XCTFail("Invalid JSON response"); return }
         
         guard let headersJSON = json["headers"]

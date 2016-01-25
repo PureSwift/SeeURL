@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SeeURL
 import SwiftFoundation
 
 class HTTPClientTests: XCTestCase {
@@ -31,9 +32,9 @@ class HTTPClientTests: XCTestCase {
         
         url.path = "status/\(originalStatusCode.rawValue)"
         
-        let request = HTTP.Request(URL: url)
+        let request = SwiftFoundation.HTTP.Request(URL: url.URLString!)
         
-        let client = HTTP.Client()
+        let client = SeeURL.HTTPClient()
         
         var response: HTTP.Response!
         
@@ -42,7 +43,7 @@ class HTTPClientTests: XCTestCase {
         
         let statusCode = response.statusCode
         
-        XCTAssert(UInt(statusCode) == originalStatusCode.rawValue, "\(UInt(statusCode)) == \(originalStatusCode.rawValue)")
+        XCTAssert(statusCode == originalStatusCode.rawValue, "\(statusCode) == \(originalStatusCode.rawValue)")
     }
 
 }
