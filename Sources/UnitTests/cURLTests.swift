@@ -70,7 +70,7 @@ class cURLTests: XCTestCase {
         
         let data: Data = Data(byteValue: [0x54, 0x65, 0x73, 0x74]) // "Test"
         
-        try! curl.setOption(CURLOPT_POSTFIELDS, data.byteValue)
+        try! curl.setOption(CURLOPT_POSTFIELDS, data)
         
         try! curl.setOption(CURLOPT_POSTFIELDSIZE, data.byteValue.count)
         
@@ -100,11 +100,9 @@ class cURLTests: XCTestCase {
         
         let dataStorage = cURL.ReadFunctionStorage(data: data)
         
-        try! curl.setOption(CURLOPT_READDATA, unsafeBitCast(dataStorage, UnsafePointer<UInt8>.self))
-        
-        let pointer = unsafeBitCast(curlReadFunction as curl_read_callback, UnsafePointer<UInt8>.self)
-        
-        try! curl.setOption(CURLOPT_READFUNCTION, pointer)
+        try! curl.setOption(CURLOPT_READDATA, dataStorage)
+                
+        try! curl.setOption(CURLOPT_READFUNCTION, curlReadFunction)
         
         do { try curl.perform() }
         catch { print("Error executing cURL request: \(error)") }
@@ -128,9 +126,9 @@ class cURLTests: XCTestCase {
         
         let storage = cURL.WriteFunctionStorage()
         
-        try! curl.setOption(CURLOPT_WRITEDATA, unsafeBitCast(storage, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_WRITEDATA, storage)
         
-        try! curl.setOption(CURLOPT_WRITEFUNCTION, unsafeBitCast(cURL.WriteFunction, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_WRITEFUNCTION, cURL.WriteFunction)
         
         do { try curl.perform() }
         catch { print("Error executing cURL request: \(error)") }
@@ -161,9 +159,9 @@ class cURLTests: XCTestCase {
         
         let storage = cURL.WriteFunctionStorage()
         
-        try! curl.setOption(CURLOPT_HEADERDATA, unsafeBitCast(storage, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_HEADERDATA, storage)
         
-        try! curl.setOption(CURLOPT_HEADERFUNCTION, unsafeBitCast(cURL.WriteFunction, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_HEADERFUNCTION, cURL.WriteFunction)
         
         do { try curl.perform() }
         catch { print("Error executing cURL request: \(error)") }
@@ -193,9 +191,9 @@ class cURLTests: XCTestCase {
         
         let storage = cURL.WriteFunctionStorage()
         
-        try! curl.setOption(CURLOPT_WRITEDATA, unsafeBitCast(storage, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_WRITEDATA, storage)
         
-        try! curl.setOption(CURLOPT_WRITEFUNCTION, unsafeBitCast(curlWriteFunction as curl_write_callback, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_WRITEFUNCTION, curlWriteFunction)
         
         do { try curl.perform() }
         catch { print("Error executing cURL request: \(error)") }

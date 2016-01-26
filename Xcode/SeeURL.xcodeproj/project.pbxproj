@@ -113,8 +113,8 @@
 				6E92A4411C15470A007BC4E9 /* cURL.swift */,
 				6E92A4421C15470A007BC4E9 /* cURLError.swift */,
 				6E92A4431C15470A007BC4E9 /* cURLReadFunction.swift */,
-				6E92A4441C15470A007BC4E9 /* cURLStringList.swift */,
 				6E92A4451C15470A007BC4E9 /* cURLWriteFunction.swift */,
+				6E92A4441C15470A007BC4E9 /* cURLStringList.swift */,
 				6E92A4461C15470A007BC4E9 /* HTTPClient.swift */,
 			);
 			name = SeeURL;

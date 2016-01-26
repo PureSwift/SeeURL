@@ -12,7 +12,7 @@
 
 #define CURL_INLINE static __inline__
 
-typedef size_t (*curl_func)(void * ptr, size_t size, size_t num, void * ud);
+typedef size_t (*curl_func)(char * ptr, size_t size, size_t num, void * ud);
 
 CURL_INLINE CURLcode curl_easy_setopt_string(CURL *curl, CURLoption option, const char *param) {
     return curl_easy_setopt(curl, option, param);
@@ -27,12 +27,12 @@ CURL_INLINE CURLcode curl_easy_setopt_func(CURL *handle, CURLoption option, curl
     return curl_easy_setopt(handle, option, param);
 }
 
-CURL_INLINE CURLcode curl_easy_setopt_pointer(CURL *handle, CURLoption option, void* param)
+CURL_INLINE CURLcode curl_easy_setopt_pointer(CURL *handle, CURLoption option, const void* param)
 {
     return curl_easy_setopt(handle, option, param);
 }
 
-CURL_INLINE CURLcode curl_easy_setopt_long(CURL *curl, CURLoption option, int64_t param) {
+CURL_INLINE CURLcode curl_easy_setopt_long(CURL *curl, CURLoption option, long param) {
     return curl_easy_setopt(curl, option, param);
 }
 
@@ -40,7 +40,7 @@ CURL_INLINE CURLcode curl_easy_setopt_slist(CURL *curl, CURLoption option, struc
     return curl_easy_setopt(curl, option, param);
 }
 
-CURL_INLINE CURLcode curl_easy_getinfo_long(CURL *handle, CURLINFO option, int64_t *param)
+CURL_INLINE CURLcode curl_easy_getinfo_long(CURL *handle, CURLINFO option, long *param)
 {
     return curl_easy_getinfo(handle, option, param);
 }

@@ -39,7 +39,7 @@ public struct HTTPClient: URLClient {
         // append data
         if let bodyData = request.body {
             
-            try curl.setOption(CURLOPT_POSTFIELDS, bodyData.byteValue)
+            try curl.setOption(CURLOPT_POSTFIELDS, bodyData)
             
             try curl.setOption(CURLOPT_POSTFIELDSIZE, bodyData.byteValue.count)
         }
@@ -78,15 +78,15 @@ public struct HTTPClient: URLClient {
         
         let responseBodyStorage = cURL.WriteFunctionStorage()
         
-        try! curl.setOption(CURLOPT_WRITEDATA, unsafeBitCast(responseBodyStorage, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_WRITEDATA, responseBodyStorage)
         
-        try! curl.setOption(CURLOPT_WRITEFUNCTION, unsafeBitCast(curlWriteFunction as curl_write_callback, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_WRITEFUNCTION, curlWriteFunction)
         
         let responseHeaderStorage = cURL.WriteFunctionStorage()
         
-        try! curl.setOption(CURLOPT_HEADERDATA, unsafeBitCast(responseHeaderStorage, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_HEADERDATA, responseHeaderStorage)
         
-        try! curl.setOption(CURLOPT_HEADERFUNCTION, unsafeBitCast(curlWriteFunction as curl_write_callback, UnsafeMutablePointer<UInt8>.self))
+        try! curl.setOption(CURLOPT_HEADERFUNCTION, curlWriteFunction)
         
         // connect to server
         try curl.perform()

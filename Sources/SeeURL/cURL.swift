@@ -89,10 +89,39 @@ public final class cURL {
     
     // MARK: - Set Option
     
-    /// Set object pointer value for ```CURLoption```.
-    public func setOption(option: Option, _ value: UnsafePointer<UInt8>) throws {
+    public func setOption(option: Option, _ value: String) throws {
         
-        let code = curl_easy_setopt(internalHandler, option: option, param: value)
+        let code = curl_easy_setopt_string(internalHandler, option, value)
+        
+        guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
+    }
+    
+    public func setOption(option: Option, _ value: Data) throws {
+        
+        var bytes = unsafeBitCast(value.byteValue, [CChar].self)
+        
+        let code = curl_easy_setopt_string(internalHandler, option, &bytes)
+        
+        guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
+    }
+    
+    public func setOption(option: Option, _ value: curl_read_callback) throws {
+        
+        let code = curl_easy_setopt_func(internalHandler, option, value)
+        
+        guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
+    }
+    
+    public func setOption(option: Option, _ value: AnyObject) throws {
+        
+        let code = curl_easy_setopt_pointer(internalHandler, option, unsafeBitCast(value, UnsafeMutablePointer<Void>.self))
+        
+        guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
+    }
+    
+    public func setOption(option: Option, inout _ value: Data) throws {
+        
+        let code = curl_easy_setopt_pointer(internalHandler, option, &value.byteValue)
         
         guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
     }
@@ -100,15 +129,17 @@ public final class cURL {
     /// Set ```cURL.Long``` value for ```CURLoption```.
     public func setOption(option: Option, _ value: Long) throws {
         
-        let pointer = unsafeBitCast(value, UnsafePointer<UInt8>.self)
+        let code = curl_easy_setopt_long(internalHandler, option, value)
         
-        try setOption(option, pointer)
+        guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
     }
     
     /// Set boolean value for ```CURLoption```.
     public func setOption(option: Option, _ value: Bool) throws {
         
-        try setOption(option, Long(value))
+        let code = curl_easy_setopt_bool(internalHandler, option, value)
+        
+        guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
     }
     
     /// Set string list value for ```CURLoption```.
@@ -122,7 +153,9 @@ public final class cURL {
             pointer = curl_slist_append(pointer, string)
         }
         
-        try setOption(option, unsafeBitCast(pointer, UnsafeMutablePointer<UInt8>.self))
+        let code = curl_easy_setopt_slist(internalHandler, option, pointer)
+        
+        guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
         
         internalOptionStringLists[option.rawValue] = pointer
     }
@@ -134,7 +167,7 @@ public final class cURL {
         
         var stringBytesPointer = UnsafePointer<CChar>()
         
-        let code = curl_easy_getinfo(internalHandler, info: info, param: &stringBytesPointer)
+        let code = curl_easy_getinfo_string(internalHandler, info, &stringBytesPointer)
         
         guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
         
@@ -146,7 +179,7 @@ public final class cURL {
         
         var value: Long = 0
         
-        let code = curl_easy_getinfo(internalHandler, info: info, param: &value)
+        let code = curl_easy_getinfo_long(internalHandler, info, &value)
         
         guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
         
@@ -158,7 +191,7 @@ public final class cURL {
         
         var value: Double = 0
         
-        let code = curl_easy_getinfo(internalHandler, info: info, param: &value)
+        let code = curl_easy_getinfo_double(internalHandler, info, &value)
         
         guard code.rawValue == CURLE_OK.rawValue else { throw Error(code: code)! }
         
@@ -168,8 +201,8 @@ public final class cURL {
 
 // MARK: - Function Declarations
 
-@asmname("curl_easy_setopt") public func curl_easy_setopt(curl: cURL.Handler, option: cURL.Option, param: UnsafePointer<UInt8>) -> CURLcode
+//@asmname("curl_easy_setopt") public func curl_easy_setopt(curl: cURL.Handler, option: cURL.Option, param: UnsafePointer<UInt8>) -> CURLcode
 
-@asmname("curl_easy_getinfo") public func curl_easy_getinfo<T>(curl: cURL.Handler, info: cURL.Info, inout param: T) -> CURLcode
+//@asmname("curl_easy_getinfo") public func curl_easy_getinfo<T>(curl: cURL.Handler, info: cURL.Info, inout param: T) -> CURLcode
 
 
