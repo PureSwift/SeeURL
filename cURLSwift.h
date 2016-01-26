@@ -60,3 +60,9 @@ CURL_INLINE CURLcode curl_easy_getinfo_slist(CURL *handle, CURLINFO option, stru
     return curl_easy_getinfo(handle, option, param);
 }
 
+/** Public interface for FormAdd() */
+static
+CURLFORMcode FormAdd(struct curl_httppost **httppost,
+                     struct curl_httppost **last_post,
+                     va_list params);
+
