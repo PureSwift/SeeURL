@@ -49,8 +49,8 @@ public func curlReadFunction(pointer: UnsafeMutablePointer<Int8>, size: Int, nme
     
     pointer.memory = char
     
-    storage.currentIndex += 2
+    storage.currentIndex++
     
-    return 0
+    return 1
 }
 
