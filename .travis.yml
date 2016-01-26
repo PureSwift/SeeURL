@@ -20,7 +20,7 @@ env:
 script:
   - uname
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then xctool test -project ./Xcode/SeeURL.xcodeproj -scheme "SeeURL OS X" -sdk macosx ONLY_ACTIVE_ARCH=NO ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then xctool build -project ./Xcode/SeeURL.xcodeproj -scheme "SeeURL iOS" -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then xctool test -project ./Xcode/SeeURL.xcodeproj -scheme "SeeURL iOS" -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO ; fi
   
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export PATH=$(pwd)/tests/$SWIFT_VERSION-ubuntu14.04/usr/bin:"${PATH}" ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then swift build -c release ; fi

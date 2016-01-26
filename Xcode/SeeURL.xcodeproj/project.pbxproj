@@ -27,6 +27,8 @@
 		6E587DB01C574349009741E1 /* cURL.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D8C1C56D1AD009741E1 /* cURL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E587DB11C574349009741E1 /* JSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D8E1C56D1AD009741E1 /* JSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E587DB21C574349009741E1 /* SwiftFoundation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D901C56D1AD009741E1 /* SwiftFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E7AD6091C57477C009C662B /* cURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18ED791C5685BF002896B6 /* cURLTests.swift */; };
+		6E7AD60A1C574786009C662B /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18ED7A1C5685BF002896B6 /* HTTPClientTests.swift */; };
 		6E92A4471C15470A007BC4E9 /* cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4411C15470A007BC4E9 /* cURL.swift */; };
 		6E92A4481C15470A007BC4E9 /* cURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4421C15470A007BC4E9 /* cURLError.swift */; };
 		6E92A4491C15470A007BC4E9 /* cURLReadFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4431C15470A007BC4E9 /* cURLReadFunction.swift */; };
@@ -463,6 +465,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7AD60A1C574786009C662B /* HTTPClientTests.swift in Sources */,
+				6E7AD6091C57477C009C662B /* cURLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,7 +696,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/iOS;
 				INFOPLIST_FILE = SeeURLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;
@@ -707,7 +711,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/iOS;
 				INFOPLIST_FILE = SeeURLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;
