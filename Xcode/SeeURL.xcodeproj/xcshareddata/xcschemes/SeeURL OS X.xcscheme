@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E2F720E1C15255100E81D56"
                BuildableName = "SeeURLTests.xctest"
-               BlueprintName = "SeeURLTests"
+               BlueprintName = "SeeURLTests OS X"
                ReferencedContainer = "container:SeeURL.xcodeproj">
             </BuildableReference>
          </TestableReference>

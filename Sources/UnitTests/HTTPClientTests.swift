@@ -6,6 +6,12 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
+#if os(OSX) || os(iOS)
+    import cURL
+#elseif os(Linux)
+    import CcURL
+#endif
+
 import XCTest
 import SeeURL
 import SwiftFoundation

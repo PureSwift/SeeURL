@@ -23,6 +23,10 @@
 		6E587D991C56D1C2009741E1 /* cURL.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D931C56D1AD009741E1 /* cURL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E587D9A1C56D1C2009741E1 /* JSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D951C56D1AD009741E1 /* JSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E587D9B1C56D1C2009741E1 /* SwiftFoundation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D971C56D1AD009741E1 /* SwiftFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E587DA51C5742BB009741E1 /* SeeURL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2F72051C15255100E81D56 /* SeeURL.framework */; };
+		6E587DB01C574349009741E1 /* cURL.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D8C1C56D1AD009741E1 /* cURL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E587DB11C574349009741E1 /* JSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D8E1C56D1AD009741E1 /* JSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E587DB21C574349009741E1 /* SwiftFoundation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6E587D901C56D1AD009741E1 /* SwiftFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E92A4471C15470A007BC4E9 /* cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4411C15470A007BC4E9 /* cURL.swift */; };
 		6E92A4481C15470A007BC4E9 /* cURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4421C15470A007BC4E9 /* cURLError.swift */; };
 		6E92A4491C15470A007BC4E9 /* cURLReadFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92A4431C15470A007BC4E9 /* cURLReadFunction.swift */; };
@@ -38,6 +42,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6E2F72041C15255100E81D56;
 			remoteInfo = SeeURL;
+		};
+		6E587DB31C57442D009741E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E2F71FC1C15255100E81D56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E18ED681C56823E002896B6;
+			remoteInfo = "SeeURL iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,13 +66,26 @@
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E587DA71C5742BB009741E1 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6E587DB01C574349009741E1 /* cURL.framework in Copy Frameworks */,
+				6E587DB11C574349009741E1 /* JSON.framework in Copy Frameworks */,
+				6E587DB21C574349009741E1 /* SwiftFoundation.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6E18ED771C56823E002896B6 /* SeeURL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeeURL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E18ED791C5685BF002896B6 /* cURLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cURLTests.swift; sourceTree = "<group>"; };
 		6E18ED7A1C5685BF002896B6 /* HTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
-		6E18ED7E1C56C346002896B6 /* cURLSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cURLSwift.h; sourceTree = "<group>"; };
+		6E18ED7E1C56C346002896B6 /* cURLSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cURLSwift.h; path = ../cURLSwift.h; sourceTree = "<group>"; };
 		6E2F72051C15255100E81D56 /* SeeURL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeeURL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2F72081C15255100E81D56 /* SeeURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeeURL.h; sourceTree = "<group>"; };
 		6E2F720A1C15255100E81D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +98,7 @@
 		6E587D951C56D1AD009741E1 /* JSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSON.framework; sourceTree = "<group>"; };
 		6E587D971C56D1AD009741E1 /* SwiftFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftFoundation.framework; sourceTree = "<group>"; };
 		6E587D9C1C57377A009741E1 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6E587DAE1C5742BB009741E1 /* SeeURLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeeURLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E92A4411C15470A007BC4E9 /* cURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURL.swift; path = ../../Sources/SeeURL/cURL.swift; sourceTree = "<group>"; };
 		6E92A4421C15470A007BC4E9 /* cURLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLError.swift; path = ../../Sources/SeeURL/cURLError.swift; sourceTree = "<group>"; };
 		6E92A4431C15470A007BC4E9 /* cURLReadFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLReadFunction.swift; path = ../../Sources/SeeURL/cURLReadFunction.swift; sourceTree = "<group>"; };
@@ -102,6 +127,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E2F72101C15255100E81D56 /* SeeURL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E587DA41C5742BB009741E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E587DA51C5742BB009741E1 /* SeeURL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +193,7 @@
 				6E2F72051C15255100E81D56 /* SeeURL.framework */,
 				6E2F720F1C15255100E81D56 /* SeeURLTests.xctest */,
 				6E18ED771C56823E002896B6 /* SeeURL.framework */,
+				6E587DAE1C5742BB009741E1 /* SeeURLTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,9 +315,9 @@
 			productReference = 6E2F72051C15255100E81D56 /* SeeURL.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6E2F720E1C15255100E81D56 /* SeeURLTests */ = {
+		6E2F720E1C15255100E81D56 /* SeeURLTests OS X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E2F721C1C15255100E81D56 /* Build configuration list for PBXNativeTarget "SeeURLTests" */;
+			buildConfigurationList = 6E2F721C1C15255100E81D56 /* Build configuration list for PBXNativeTarget "SeeURLTests OS X" */;
 			buildPhases = (
 				6E2F720B1C15255100E81D56 /* Sources */,
 				6E2F720C1C15255100E81D56 /* Frameworks */,
@@ -295,9 +329,28 @@
 			dependencies = (
 				6E2F72121C15255100E81D56 /* PBXTargetDependency */,
 			);
-			name = SeeURLTests;
+			name = "SeeURLTests OS X";
 			productName = SeeURLTests;
 			productReference = 6E2F720F1C15255100E81D56 /* SeeURLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E587D9E1C5742BB009741E1 /* SeeURLTests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E587DAB1C5742BB009741E1 /* Build configuration list for PBXNativeTarget "SeeURLTests iOS" */;
+			buildPhases = (
+				6E587DA11C5742BB009741E1 /* Sources */,
+				6E587DA41C5742BB009741E1 /* Frameworks */,
+				6E587DA61C5742BB009741E1 /* Resources */,
+				6E587DA71C5742BB009741E1 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E587DB41C57442D009741E1 /* PBXTargetDependency */,
+			);
+			name = "SeeURLTests iOS";
+			productName = SeeURLTests;
+			productReference = 6E587DAE1C5742BB009741E1 /* SeeURLTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -332,8 +385,9 @@
 			projectRoot = "";
 			targets = (
 				6E2F72041C15255100E81D56 /* SeeURL OS X */,
-				6E2F720E1C15255100E81D56 /* SeeURLTests */,
+				6E2F720E1C15255100E81D56 /* SeeURLTests OS X */,
 				6E18ED681C56823E002896B6 /* SeeURL iOS */,
+				6E587D9E1C5742BB009741E1 /* SeeURLTests iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -354,6 +408,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6E2F720D1C15255100E81D56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E587DA61C5742BB009741E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,6 +459,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E587DA11C5742BB009741E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -405,6 +473,11 @@
 			isa = PBXTargetDependency;
 			target = 6E2F72041C15255100E81D56 /* SeeURL OS X */;
 			targetProxy = 6E2F72111C15255100E81D56 /* PBXContainerItemProxy */;
+		};
+		6E587DB41C57442D009741E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E18ED681C56823E002896B6 /* SeeURL iOS */;
+			targetProxy = 6E587DB31C57442D009741E1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -424,7 +497,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/SeeURL/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURL;
 				PRODUCT_NAME = SeeURL;
 				SDKROOT = iphoneos;
@@ -448,7 +521,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/SeeURL/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURL;
 				PRODUCT_NAME = SeeURL;
 				SDKROOT = iphoneos;
@@ -596,7 +669,7 @@
 				INFOPLIST_FILE = SeeURLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SeeURLTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -610,7 +683,36 @@
 				INFOPLIST_FILE = SeeURLTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SeeURLTests;
+			};
+			name = Release;
+		};
+		6E587DAC1C5742BB009741E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
+				INFOPLIST_FILE = SeeURLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;
+				PRODUCT_NAME = SeeURLTests;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E587DAD1C5742BB009741E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
+				INFOPLIST_FILE = SeeURLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.pureswift.SeeURLTests;
+				PRODUCT_NAME = SeeURLTests;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -644,11 +746,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E2F721C1C15255100E81D56 /* Build configuration list for PBXNativeTarget "SeeURLTests" */ = {
+		6E2F721C1C15255100E81D56 /* Build configuration list for PBXNativeTarget "SeeURLTests OS X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E2F721D1C15255100E81D56 /* Debug */,
 				6E2F721E1C15255100E81D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E587DAB1C5742BB009741E1 /* Build configuration list for PBXNativeTarget "SeeURLTests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E587DAC1C5742BB009741E1 /* Debug */,
+				6E587DAD1C5742BB009741E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,6 +2,6 @@
 Packages
 Carthage/*
 
-Xcode/SeeURL.xcodeproj/project.xcworkspace/xcuserdata/
+Xcode/SeeURL.xcodeproj/project.xcworkspace/xcuserdata/*
 
-Xcode/SeeURL.xcodeproj/xcuserdata/
+Xcode/SeeURL.xcodeproj/xcuserdata/*

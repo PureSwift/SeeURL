@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E587D9E1C5742BB009741E1"
+               BuildableName = "SeeURLTests.xctest"
+               BlueprintName = "SeeURLTests iOS"
+               ReferencedContainer = "container:SeeURL.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6E18ED681C56823E002896B6"
+            BuildableName = "SeeURL.framework"
+            BlueprintName = "SeeURL iOS"
+            ReferencedContainer = "container:SeeURL.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
