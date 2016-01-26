@@ -16,17 +16,16 @@ import XCTest
 import SeeURL
 import SwiftFoundation
 
-class cURLTests: XCTestCase {
-
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+final class cURLTests: XCTestCase {
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    lazy var allTests : [(String, () -> Void)] = [
+        ("testGetStatusCode", self.testGetStatusCode),
+        ("testPostField", self.testPostField),
+        ("testReadFunction", self.testReadFunction),
+        ("testWriteFunction", self.testWriteFunction),
+        ("testHeaderWriteFunction", self.testHeaderWriteFunction),
+        ("testSetHeaderOption", self.testSetHeaderOption),
+    ]
     
     // MARK: - Live Tests
     
@@ -90,7 +89,7 @@ class cURLTests: XCTestCase {
         
         try! curl.setOption(CURLOPT_URL, "http://httpbin.org/post")
         
-        try! curl.setOption(CURLOPT_TIMEOUT, 5)
+        try! curl.setOption(CURLOPT_TIMEOUT, 10)
         
         try! curl.setOption(CURLOPT_POST, true)
         
@@ -105,9 +104,9 @@ class cURLTests: XCTestCase {
         try! curl.setOption(CURLOPT_READFUNCTION, curlReadFunction)
         
         do { try curl.perform() }
-        catch { print("Error executing cURL request: \(error)") }
+        catch { XCTFail("Error executing cURL request: \(error)"); return }
         
-        let responseCode = try! curl.getInfo(CURLINFO_RESPONSE_CODE) as Int
+        let responseCode = (try! curl.getInfo(CURLINFO_RESPONSE_CODE) as cURL.Long) as Int
         
         XCTAssert(responseCode == 200, "\(responseCode) == 200")
     }
@@ -118,7 +117,7 @@ class cURLTests: XCTestCase {
         
         try! curl.setOption(CURLOPT_VERBOSE, true)
         
-        let url = "http://httpbin.org/image/jpeg"
+        let url = "https://httpbin.org/image/jpeg"
         
         try! curl.setOption(CURLOPT_URL, url)
         
@@ -131,7 +130,7 @@ class cURLTests: XCTestCase {
         try! curl.setOption(CURLOPT_WRITEFUNCTION, cURL.WriteFunction)
         
         do { try curl.perform() }
-        catch { print("Error executing cURL request: \(error)") }
+        catch { XCTFail("Error executing cURL request: \(error)"); return }
         
         let responseCode = try! curl.getInfo(CURLINFO_RESPONSE_CODE) as Int
         
@@ -139,10 +138,14 @@ class cURLTests: XCTestCase {
         
         let bytes = unsafeBitCast(storage.data, [UInt8].self)
         
+        #if os(OSX) || os(iOS)
+            
         let foundationData = Data(byteValue: bytes).toFoundation()
         
         XCTAssert(foundationData == NSData(contentsOfURL: NSURL(string: url)!))
-
+        
+        #endif
+        
     }
     
     func testHeaderWriteFunction() {
@@ -164,7 +167,7 @@ class cURLTests: XCTestCase {
         try! curl.setOption(CURLOPT_HEADERFUNCTION, cURL.WriteFunction)
         
         do { try curl.perform() }
-        catch { print("Error executing cURL request: \(error)") }
+        catch { XCTFail("Error executing cURL request: \(error)"); return }
         
         let responseCode = try! curl.getInfo(CURLINFO_RESPONSE_CODE) as Int
         
@@ -179,7 +182,7 @@ class cURLTests: XCTestCase {
         
         try! curl.setOption(CURLOPT_VERBOSE, true)
         
-        let url = "http://httpbin.org/headers"
+        let url = "https://httpbin.org/headers"
         
         try! curl.setOption(CURLOPT_URL, url)
         
@@ -196,23 +199,20 @@ class cURLTests: XCTestCase {
         try! curl.setOption(CURLOPT_WRITEFUNCTION, curlWriteFunction)
         
         do { try curl.perform() }
-        catch { print("Error executing cURL request: \(error)") }
+        catch { XCTFail("Error executing cURL request: \(error)"); return }
         
         let responseCode = try! curl.getInfo(CURLINFO_RESPONSE_CODE) as Int
         
         XCTAssert(responseCode == 200, "\(responseCode) == 200")
         
-        let bytes = unsafeBitCast(storage.data, [UInt8].self)
+        guard let jsonString = String.fromCString(storage.data),
+            let jsonValue = JSON.Value(string: jsonString),
+            let jsonObject = jsonValue.objectValue,
+            let jsonHeaders = jsonObject["headers"]?.objectValue,
+            let jsonHeaderValue = jsonHeaders[header]?.rawValue as? String
+            else { XCTFail("Invalid JSON response: \(String.fromCString(storage.data))"); return }
         
-        let foundationData = Data(byteValue: bytes).toFoundation()
-        
-        guard let json = try! NSJSONSerialization.JSONObjectWithData(foundationData, options: NSJSONReadingOptions()) as? [String: [String: String]]
-            else { XCTFail("Invalid JSON response"); return }
-        
-        guard let headersJSON = json["headers"]
-            else { XCTFail("Invalid JSON response: \(json)"); return }
-        
-        XCTAssert(headersJSON[header] == headerValue)
+        XCTAssert(jsonHeaderValue == headerValue)
         
         // invoke deinit
         curl = nil

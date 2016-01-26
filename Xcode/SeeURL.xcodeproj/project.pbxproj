@@ -73,6 +73,7 @@
 		6E587D931C56D1AD009741E1 /* cURL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = cURL.framework; sourceTree = "<group>"; };
 		6E587D951C56D1AD009741E1 /* JSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSON.framework; sourceTree = "<group>"; };
 		6E587D971C56D1AD009741E1 /* SwiftFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftFoundation.framework; sourceTree = "<group>"; };
+		6E587D9C1C57377A009741E1 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6E92A4411C15470A007BC4E9 /* cURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURL.swift; path = ../../Sources/SeeURL/cURL.swift; sourceTree = "<group>"; };
 		6E92A4421C15470A007BC4E9 /* cURLError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLError.swift; path = ../../Sources/SeeURL/cURLError.swift; sourceTree = "<group>"; };
 		6E92A4431C15470A007BC4E9 /* cURLReadFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cURLReadFunction.swift; path = ../../Sources/SeeURL/cURLReadFunction.swift; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 			children = (
 				6E18ED791C5685BF002896B6 /* cURLTests.swift */,
 				6E18ED7A1C5685BF002896B6 /* HTTPClientTests.swift */,
+				6E587D9C1C57377A009741E1 /* main.swift */,
 			);
 			name = UnitTests;
 			path = ../Sources/UnitTests;

@@ -39,9 +39,9 @@ public func curlReadFunction(pointer: UnsafeMutablePointer<Int8>, size: Int, nme
     
     let currentIndex = storage.currentIndex
     
-    guard (size * nmemb) > 0 else { return Int(false) }
+    guard (size * nmemb) > 0 else { return 0 }
     
-    guard currentIndex < data.byteValue.count else { return Int(false) }
+    guard currentIndex < data.byteValue.count else { return 0 }
     
     let byte = data.byteValue[currentIndex]
     
@@ -49,8 +49,8 @@ public func curlReadFunction(pointer: UnsafeMutablePointer<Int8>, size: Int, nme
     
     pointer.memory = char
     
-    storage.currentIndex++
+    storage.currentIndex += 2
     
-    return Int(true)
+    return 0
 }
 

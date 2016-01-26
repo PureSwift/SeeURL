@@ -10,23 +10,17 @@ import XCTest
 import SeeURL
 import SwiftFoundation
 
-class HTTPClientTests: XCTestCase {
-
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+final class HTTPClientTests: XCTestCase {
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    lazy var allTests : [(String, () -> Void)] = [
+            ("testStatusCode", self.testStatusCode)
+        ]
 
     func testStatusCode() {
         
         let originalStatusCode = HTTP.StatusCode.OK
         
-        var url = SwiftFoundation.URL(scheme: "http")
+        var url = SwiftFoundation.URL(scheme: "https")
         
         url.host = "httpbin.org"
         
@@ -45,5 +39,4 @@ class HTTPClientTests: XCTestCase {
         
         XCTAssert(statusCode == originalStatusCode.rawValue, "\(statusCode) == \(originalStatusCode.rawValue)")
     }
-
 }
