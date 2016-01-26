@@ -182,7 +182,9 @@ final class cURLTests: XCTestCase {
         
         try! curl.setOption(CURLOPT_VERBOSE, true)
         
-        let url = "https://httpbin.org/headers"
+        try! curl.setOption(CURLOPT_TIMEOUT, 10)
+        
+        let url = "http://httpbin.org/headers"
         
         try! curl.setOption(CURLOPT_URL, url)
         
