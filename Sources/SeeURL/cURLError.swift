@@ -6,13 +6,15 @@
 //  Copyright © 2015 PureSwift. All rights reserved.
 //
 
-#if os(Linux)
+#if os(OSX) || os(iOS)
+    import cURL
+#elseif os(Linux)
     import CcURL
 #endif
 
 public extension cURL {
     
-    public enum Error: UInt32, ErrorType {
+    public enum Error: UInt32, ErrorType, CustomStringConvertible {
         
         case UnsupportedProtocol        = 1
         case FailedInitialization
@@ -26,8 +28,18 @@ public extension cURL {
         
         // TODO: Implement all error codes
         
+        /// There was a problem reading a local file or an error returned by the read callback.
+        case ReadCallback = 26
+        
         case OperationTimeout = 28
         
         case BadFunctionArgument = 45
+        
+        public var description: String {
+            
+            let errorDescription = String.fromCString(curl_easy_strerror(CURLcode(rawValue: self.rawValue)))
+            
+            return errorDescription ?? "cURL.Error(\(self.rawValue))"
+        }
     }
 }
