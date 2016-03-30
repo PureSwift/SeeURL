@@ -146,7 +146,7 @@ public final class cURL {
     public func setOption(option: Option, _ value: [String]) throws {
         
         // will dealloc in deinit
-        var pointer = UnsafeMutablePointer<StringList>()
+        var pointer: UnsafeMutablePointer<StringList> = nil
         
         for string in value {
             
@@ -165,7 +165,7 @@ public final class cURL {
     /// Get string value for ```CURLINFO```.
     public func getInfo(info: Info) throws -> String {
         
-        var stringBytesPointer = UnsafePointer<CChar>()
+        var stringBytesPointer: UnsafePointer<CChar> = nil
         
         let code = curl_easy_getinfo_string(internalHandler, info, &stringBytesPointer)
         
