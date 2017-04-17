@@ -1,5 +1,7 @@
 # SeeURL
 
+[![Join the chat at https://gitter.im/PureSwift/SeeURL](https://badges.gitter.im/PureSwift/SeeURL.svg)](https://gitter.im/PureSwift/SeeURL?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Swift](https://img.shields.io/badge/swift-2.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms](https://img.shields.io/badge/platform-osx%20%7C%20ios%20%7C%20tvos%20%7C%20linux-lightgrey.svg)](https://developer.apple.com/swift/)
 [![Release](https://img.shields.io/github/release/pureswift/s SeeURL.svg)](https://github.com/PureSwift/SeeURL/releases)
